@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="git://github.com" />
+
+  <remote  name="private"
+           fetch=".." />
+
+  <default revision="refs/heads/master"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+  <project path="build" name="grub4android/build" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <project path="grub" name="grub4android/grub" remote="github" />
+  <project path="lk" name="grub4android/lk" remote="github" />
+  <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
+
+</manifest>
