@@ -19,7 +19,7 @@
   <project path="grub" name="grub4android/grub" remote="github" />
   <project path="lk" name="grub4android/lk" remote="github" />
   <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
-  <project path="external/strace" name="grub4android/external_strace" remote="github" />
+  <project path="external/tracy" name="grub4android/external_tracy" remote="github" />
   <project path="multiboot" name="grub4android/multiboot" remote="github" />
 
 </manifest>
