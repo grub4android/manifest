@@ -7,6 +7,9 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
+  <remote  name="busybox"
+           fetch="git://git.busybox.net" />
+
   <default revision="refs/heads/master"
            remote="github"
            sync-c="true"
@@ -20,6 +23,7 @@
   <project path="lk" name="grub4android/lk" remote="github" />
   <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
   <project path="external/tracy" name="grub4android/external_tracy" remote="github" />
+  <project path="external/busybox" name="busybox" remote="busybox" />
   <project path="multiboot" name="grub4android/multiboot" remote="github" />
 
 </manifest>
