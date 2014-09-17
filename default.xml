@@ -10,6 +10,9 @@
   <remote  name="busybox"
            fetch="git://git.busybox.net" />
 
+  <remote  name="kernel"
+           fetch="git://git.kernel.org" />
+
   <default revision="refs/heads/master"
            remote="github"
            sync-c="true"
@@ -24,6 +27,7 @@
   <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
   <project path="external/tracy" name="grub4android/external_tracy" remote="github" />
   <project path="external/busybox" name="busybox" remote="busybox" />
+  <project path="external/e2fsprogs" name="pub/scm/fs/ext2/e2fsprogs" remote="kernel" />
   <project path="multiboot" name="grub4android/multiboot" remote="github" />
 
 </manifest>
