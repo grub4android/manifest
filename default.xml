@@ -26,8 +26,8 @@
   <project path="lk" name="grub4android/lk" remote="github" />
   <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
   <project path="external/tracy" name="grub4android/external_tracy" remote="github" />
-  <project path="external/busybox" name="busybox" remote="busybox" />
-  <project path="external/e2fsprogs" name="pub/scm/fs/ext2/e2fsprogs" remote="kernel" />
+  <project path="external/busybox" name="busybox" remote="busybox" revision="refs/tags/1_21_0" />
+  <project path="external/e2fsprogs" name="pub/scm/fs/ext2/e2fsprogs" remote="kernel" revision="refs/tags/v1.42.12" />
   <project path="multiboot" name="grub4android/multiboot" remote="github" />
 
 </manifest>
