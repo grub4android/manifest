@@ -43,7 +43,7 @@ check the [build repository](https://github.com/grub4android/build/tree/master/d
 
 ## Installation
 ### LK: Xiaomi Mi2(s)(c) 'aries' and Xiaomi Redmi 1s 'armani'
-The file "out/{DEVICE}/lk/build-*/emmc_appsboot.mbn" needs to be flashed to the aboot partition
+The file "out/DEVICENAME/lk/build-*/emmc_appsboot.mbn" needs to be flashed to the aboot partition
 
     $ fastboot flash aboot emmc_appsboot.mbn
 
