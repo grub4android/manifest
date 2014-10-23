@@ -21,7 +21,7 @@ Then to sync up:
       zip curl zlib1g-dev libc6-dev lib32ncurses5-dev \
       x11proto-core-dev libx11-dev lib32z-dev \
       libgl1-mesa-dev g++-multilib mingw32 tofrodos python-markdown \
-      libxml2-utils xsltproc autoconf grub-common qemu-user cmake vim-common\
+      libxml2-utils xsltproc autoconf grub-common qemu-user cmake vim-common \
       realpath
 
 ### Installing required packages (Ubuntu 12.04) 32-bit
