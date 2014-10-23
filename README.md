@@ -42,7 +42,7 @@ Build everything with make. GNU make can handle parallel tasks with a -jN argume
 check the [build repository](https://github.com/grub4android/build/tree/master/devices) for a list of supported devices.
 
 ## Installation
-### LK: Xiaomi Mi2(s)(c) - aries
+### LK: Xiaomi Mi2(s)(c) 'aries' and Xiaomi Redmi 1s 'armani'
 The file "out/aries/lk/build-msm8960/emmc_appsboot.mbn" needs to be flashed to the aboot partition
 
     $ fastboot flash aboot emmc_appsboot.mbn
