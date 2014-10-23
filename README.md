@@ -21,7 +21,8 @@ Then to sync up:
       zip curl zlib1g-dev libc6-dev lib32ncurses5-dev \
       x11proto-core-dev libx11-dev lib32z-dev \
       libgl1-mesa-dev g++-multilib mingw32 tofrodos python-markdown \
-      libxml2-utils xsltproc autoconf grub-common qemu-user cmake
+      libxml2-utils xsltproc autoconf grub-common qemu-user cmake vim-common\
+      realpath
 
 ### Installing required packages (Ubuntu 12.04) 32-bit
     $ sudo apt-get install git gnupg flex bison gperf build-essential \
@@ -29,7 +30,7 @@ Then to sync up:
       libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
       libgl1-mesa-dev g++-multilib mingw32 tofrodos \
       python-markdown libxml2-utils xsltproc zlib1g-dev:i386 \
-      autoconf grub-common qemu-user cmake
+      autoconf grub-common qemu-user cmake vim-common realpath
     $ sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
 
 
