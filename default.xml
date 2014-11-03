@@ -13,6 +13,9 @@
   <remote  name="kernel"
            fetch="git://git.kernel.org" />
 
+  <remote  name="android"
+           fetch="https://android.googlesource.com" />
+
   <default revision="refs/heads/master"
            remote="github"
            sync-c="true"
@@ -29,6 +32,7 @@
   <project path="external/busybox" name="busybox" remote="busybox" revision="refs/tags/1_21_0" />
   <project path="external/e2fsprogs" name="pub/scm/fs/ext2/e2fsprogs" remote="kernel" revision="refs/tags/v1.42.12" />
   <project path="external/mkbootimg" name="grub4android/external_mkbootimg" remote="github" />
+  <project path="external/libselinux" name="platform/external/libselinux" remote="android" revision="refs/tags/android-4.4.4_r2.0.1" />
   <project path="multiboot" name="grub4android/multiboot" remote="github" />
 
 </manifest>
