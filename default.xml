@@ -29,7 +29,7 @@
   <project path="lk" name="grub4android/lk" remote="github" />
   <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
   <project path="external/tracy" name="grub4android/external_tracy" remote="github" />
-  <project path="external/busybox" name="busybox" remote="busybox" revision="refs/tags/1_21_0" />
+  <project path="external/busybox" name="busybox" remote="busybox" revision="refs/tags/1_22_1" />
   <project path="external/e2fsprogs" name="pub/scm/fs/ext2/e2fsprogs" remote="kernel" revision="refs/tags/v1.42.12" />
   <project path="external/mkbootimg" name="grub4android/external_mkbootimg" remote="github" />
   <project path="external/libselinux" name="platform/external/libselinux" remote="android" revision="refs/tags/android-5.0.0_r2" />
