@@ -1,0 +1,89 @@
+#!/bin/bash
+
+main(){
+  rm -rf outzip
+  TOP=$(realpath .)
+  checkin $1
+  repo sync
+  setup $1
+  compile $1
+}
+
+head(){
+  clear
+  echo "##########################"
+  echo "GRUB4Android -- Build info"
+  echo "Device:  $1"
+  echo "Version: $aboot_version"
+  echo "Date:    $now"
+  echo "Host: $(uname)"
+  echo "Out: $outfile"
+  echo "#######################"
+}
+
+compile(){
+  cd $TOP
+  head $1
+  if [ -d $TOP/out/target/$1 ]; then
+    echo "$(tput setaf 3)Cleaning up...$(tput sgr 0)"
+    sleep 1
+    rm -rf out
+    echo "$(tput setaf 2)Now ready to build!$(tput sgr 0)"
+    sleep 2
+  fi
+  echo "$(tput setaf 3)Starting...$(tput sgr 0)"
+  sleep 1
+  make $1 -j16 | tee $1.log
+  if [ $? == 0 ]; then
+    getzip
+  else
+    echo "$(tput setaf 1)Compilation failed, see the file $1.log$(tput sgr 0)"
+    exit 1
+  fi
+}
+getzip(){
+  if [ -f $outdir/lk/build-msm*/emmc_appsboot.mbn ]; then
+    if [ -d $outdir/grub/grub_rootfs/boot  ]; then
+      mkdir outzip & mkdir outzip/lk & mkdir outzip/grub &>/dev/null
+      cp $outdir/lk/build-msm*/emmc_appsboot.mbn outzip/lk/emmc_appsboot.mbn
+      cp -r $outdir/grub/grub_rootfs/boot outzip/grub/
+      zip -r $outfile outzip/* &>/dev/null
+      echo "$(tput setaf 4)Done, out file $(realpath $outfile)$(tput sgr 0)"
+    else
+      echo "$(tput setaf 1)Error: couldn't find out-grub!$(tput sgr 0)"
+    fi
+  else
+    echo "$(tput setaf 1)Error: couldn't find out-lk!$(tput sgr 0)"
+  fi
+}
+
+setup(){
+  aboot_version=$(cat $TOP/lk/app/aboot/include/app/aboot.h | grep '#define ABOOT_VERSION'  )
+  #since it exports the whole line, let's remove useless things.
+  aboot_version=${aboot_version###define ABOOT_VERSION ""}
+  now=$(date +"%F-%H-%M")
+  outdir=$TOP/out/target/$1
+  outfile="g4a-$1-$aboot_version-$now.zip"
+}
+
+checkin(){
+  if [ -d $TOP/build/devices/$1 ]; then
+    return 0
+  else
+    echo "$(tput setaf 1)$1: Unsupported device!$(tput sgr 0)"
+    g4aman
+    exit 1
+  fi
+}
+
+g4aman() {
+  echo "Usage:   ./compile DEVICE"
+  echo "Supported devices: "
+  cd $TOP/build/devices
+  for d in *; do echo "$d" ; done
+  cd $TOP
+  exit 1
+}
+
+
+main $1

@@ -25,6 +25,10 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
+  <project path=".manifest" name="grub4android/manifest" >
+    <copyfile src="compile" dest="compile" />
+  </project>
+
   <project path="grub" name="grub4android/grub" remote="github" />
   <project path="lk" name="grub4android/lk" remote="github" />
   <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
