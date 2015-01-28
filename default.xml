@@ -35,6 +35,7 @@
   <project path="external/fastboot" name="grub4android/external_fastboot" remote="github" />
   <project path="external/libselinux" name="platform/external/libselinux" remote="android" revision="refs/tags/android-5.0.0_r2" />
   <project path="external/screenstream" name="grub4android/external_screenstream" remote="github" />
+  <project path="external/syscallserver" name="grub4android/external_syscallserver" remote="github" />
   <project path="multiboot" name="grub4android/multiboot" remote="github" />
 
 </manifest>
