@@ -32,6 +32,7 @@
   <project path="external/busybox" name="busybox" remote="busybox" revision="refs/tags/1_23_0" />
   <project path="external/e2fsprogs" name="pub/scm/fs/ext2/e2fsprogs" remote="kernel" revision="refs/tags/v1.42.12" />
   <project path="external/mkbootimg" name="grub4android/external_mkbootimg" remote="github" />
+  <project path="external/fastboot" name="grub4android/external_fastboot" remote="github" />
   <project path="external/libselinux" name="platform/external/libselinux" remote="android" revision="refs/tags/android-5.0.0_r2" />
   <project path="external/screenstream" name="grub4android/external_screenstream" remote="github" />
   <project path="multiboot" name="grub4android/multiboot" remote="github" />
