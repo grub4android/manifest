@@ -28,6 +28,7 @@
   <project path="grub" name="grub4android/grub" remote="github" />
   <project path="lk" name="grub4android/lk" remote="github" />
   <project path="prebuilts" name="grub4android/prebuilts" remote="github" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="android" revision="refs/tags/android-5.1.0_r3" />
   <project path="external/tracy" name="grub4android/external_tracy" remote="github" />
   <project path="external/busybox" name="busybox" remote="busybox" revision="refs/tags/1_23_0" />
   <project path="external/e2fsprogs" name="pub/scm/fs/ext2/e2fsprogs" remote="kernel" revision="refs/tags/v1.42.12" />
