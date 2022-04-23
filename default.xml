@@ -2,13 +2,13 @@
 <manifest>
 
   <remote  name="github"
-           fetch="git://github.com" />
+           fetch="https://github.com" />
 
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
   <remote  name="busybox"
-           fetch="git://git.busybox.net" />
+           fetch="https://git.busybox.net" />
 
   <remote  name="kernel"
            fetch="git://git.kernel.org" />
